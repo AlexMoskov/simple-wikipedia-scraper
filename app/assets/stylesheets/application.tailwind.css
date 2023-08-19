@@ -11,3 +11,9 @@
 }
 
 */
+
+@layer components {
+  .btn {
+      @apply mt-3 rounded-lg py-1 px-5 inline-block font-medium cursor-pointer;
+  }
+}

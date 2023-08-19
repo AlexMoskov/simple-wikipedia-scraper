@@ -1,0 +1,25 @@
+<% if notice.present? %>
+  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+    <%= notice %>
+  </p>
+<% end %>
+
+<% if alert.present? %>
+  <p class="py-2 px-3 bg-red-50 mb-5 text-red-500 font-medium rounded-lg inline-block" id="alert">
+    <%= alert %>
+  </p>
+<% end %>
+
+<h1 class="font-bold text-2xl">Wikipedia Scraper</h1>
+
+<div class="mt-4">
+  <%= render "form", article: @article %>
+</div>
+
+<div id="articles">
+  <h1 class="font-bold text-lg mb-7">Last 5 Articles</h1>
+
+  <div class="px-5">
+    <%= render @articles %>
+  </div>
+</div>
