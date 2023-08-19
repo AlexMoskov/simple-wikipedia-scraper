@@ -1,4 +1,7 @@
-<div class="block mb-2">
+<turbo-frame id="<%= dom_id article %>" class="block">
   <p><strong>Title:</strong> <%= article.title %></p>
   <p><strong>Valid languages:</strong> <%= article.languages %></p>
-</div>
+  <div class="ml-2 text-center">
+    <%= button_to "Delete", article_path(article), method: :delete, data: { "turbo-frame": "_top" }, class: "btn bg-red-100" %>
+  </div>
+</turbo-frame>
