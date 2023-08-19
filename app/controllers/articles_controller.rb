@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
 
   def valid_wikipedia_link?(link)
     # Use a regular expression to match Wikipedia article URLs
-    wikipedia_pattern = %r{https?://(www\.)?en\.wikipedia\.org/wiki/.+}
+    wikipedia_pattern = %r{https?://(www\.)?.*\.wikipedia\.org/wiki/.+}
   
     !!(link =~ wikipedia_pattern)
   end
